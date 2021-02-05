@@ -24,6 +24,7 @@ S consists only of English lowercase letters.
 
 
 */
+
 #include <string>
 #include <cstring>
 
@@ -35,7 +36,9 @@ public:
         bool flag;
         
         flag=false;
-       label: for(auto i=0;i<S.length();)
+        while (1)
+        {
+        for(auto i=0;i<S.length();)
         {
             if(S[i]!=S[i+1])
             {
@@ -49,17 +52,21 @@ public:
                 flag=true;
             }
                 
-        }
+        }  
         if(flag==true)
         {
             
             S=str;
             str.clear();
             flag=false;
-            goto label;
             
         }
-        else
+            else
+                break;
+        }
+        
+       
+        
             
         return str;
     }
